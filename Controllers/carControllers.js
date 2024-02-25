@@ -1,11 +1,15 @@
 const Car = require("../Model/car");
 //POST
 const createCar = async (req, res) => { 
-  const{ Brand } = req.body;
+  const{ Brand, Model, Features, Color, ImgUrl } = req.body;
  try {
   const car = await Car.create({
-    Brand: Brand,
-    postedBy: req.user,
+    Brand,
+    Model,
+    Features,
+    Color,
+    ImgUrl,
+    postedBy: req.user._id
   });
  return res.json(car);
  } catch (error) {

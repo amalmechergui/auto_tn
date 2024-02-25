@@ -1,10 +1,10 @@
-const jwt = require("jsonwebtoken");
+/*const jwt = require("jsonwebtoken");
 const User = require("../Model/userModel");
 
 const protect = async (req, res, next) => {
  let token;
  token = req.cookies.jwt;
-
+ 
  if (token) {
    try {
      const decoded = jwt.verify(token, process.env.JWT_TOKEN_SECRET);
@@ -20,4 +20,4 @@ const protect = async (req, res, next) => {
  }
 };
 
-module.exports = { protect };
+module.exports = { protect };*/

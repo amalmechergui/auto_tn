@@ -1,17 +1,17 @@
 const express = require("express");
-const { protect } = require("../middlewares/protect");
+//const {protect} = require("../Middlewares/protect");
 const { createCar, getCars, updateCar, deleteCar } = require("../Controllers/carControllers");
 
 
 const router = express.Router();
 
-// @ Create car , the end point is /api/cars  ,    // private
-router.post("/", protect, createCar);
+//  Create car , the end point is /api/cars  , 
+router.post("/", createCar);
 
-//@ Get cars  /api/cars
+// Get cars  /api/cars
 router.get("/",getCars);
 
-//@ update car
+// update car
 router.put("/:id", updateCar );
 
 // delete car
