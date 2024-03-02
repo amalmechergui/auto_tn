@@ -6,6 +6,7 @@ Model: { type: String },
 Features: { type: String},
 Color: { type: String},
 ImgUrl: {type: String},
+Price: {type: String},
 postedBy: { type: Object },
 });
 module.exports= mongoose.model("Car", carSchema);

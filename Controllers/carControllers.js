@@ -1,7 +1,7 @@
 const Car = require("../Model/car");
 //POST
 const createCar = async (req, res) => { 
-  const{ Brand, Model, Features, Color, ImgUrl } = req.body;
+  const{ Brand, Model, Features, Color, ImgUrl, Price, postedBy } = req.body;
  try {
   const car = await Car.create({
     Brand,
@@ -9,7 +9,9 @@ const createCar = async (req, res) => {
     Features,
     Color,
     ImgUrl,
-    postedBy: req.user._id
+    Price,
+    postedBy: req.user,
+    // postedBy: req.user._id  modifier par Saif 
   });
  return res.json(car);
  } catch (error) {
