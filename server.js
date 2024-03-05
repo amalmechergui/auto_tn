@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 dotenv.config();
 app.use(cookieParser());
+
+app.use((req,res)=>{ res.send("API is running... ")});
+
 mongoose.connect(process.env.MONGO_URL).then(console.log("MONGO Connected"));
 const PORT = process.env.PORT || 4000;
 
